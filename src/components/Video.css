@@ -1,0 +1,105 @@
+.video {
+    width: 320px;
+    flex-shrink: 0;
+}
+
+.video__thumbnail iframe {
+    border-radius: 10px;
+}
+
+.video__info {
+    width: 320px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;           /* 세로로 정렬 */
+    justify-content: space-between;
+}
+
+.video__info__title {
+    display: -webkit-box;               /* flex-like 박스 모델 */
+    -webkit-line-clamp: 2;             /* 최대 2줄까지 보여줘 */
+    -webkit-box-orient: vertical;      /* 박스 방향을 세로로 */
+    overflow: hidden;                  /* 넘치는 내용은 감춤 */
+    text-overflow: ellipsis;
+    font-weight: 300;
+    font-size: 1rem;
+    color: #fafafa;
+}
+
+.video__info__date {
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: #fafafa80;
+}
+
+.video__info__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.video__info__buttons--filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    height: 30px;
+    padding: 0 14px;
+
+    background: none;
+    border: 2px solid #ff3b3b;
+    border-radius: 22px;
+    box-shadow: 0 0 2px #b5191a, 0 0 5px #b5191a;
+
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #fafafa;
+    line-height: 20px;
+}
+
+.video__info__buttons--link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    height: 30px;
+    padding: 0 8px;
+
+    background: none;
+    border: none;
+    border-radius: 22px;
+    box-shadow: 0 0 2px #b5191a, 0 0 5px #b5191a;
+
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: #fafafa;
+    text-decoration: none;
+
+    position: relative;
+    cursor: pointer;
+    transition-duration: .3s;
+}
+
+.link__svgIcon {
+  height: 0.8rem;
+  transition-duration: 1.5s;
+  fill: #fafafa;
+}
+
+.video__info__buttons--link:hover {
+  background-color: #b5191a;
+  transition-duration: .5s;
+}
+
+.video__info__buttons--link:active {
+  transform: scale(0.9);
+  transition-duration: .2s;
+}
+
+.video__info__buttons--link:hover .link__svgIcon {
+  transform: rotate(250deg);
+  transition-duration: 1.5s;
+}
