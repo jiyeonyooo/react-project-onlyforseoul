@@ -13,6 +13,8 @@ header {
 .header__logo {
    width: 150px;
    height: 150px;
+
+   cursor: pointer;
 }
 
 nav {
@@ -51,4 +53,9 @@ nav li::after {
 
 nav li:hover::after {
    width: 100%;
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
 }
