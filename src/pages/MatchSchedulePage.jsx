@@ -1,10 +1,9 @@
-import Calendar from '../components/Calendar.jsx';
+import SeoulCalendar from '../components/SeoulCalendar.jsx';
 
 const MatchSchedulePage = () => {
    return(
       <div>
-         경기 일정
-         <Calendar />
+         <SeoulCalendar />
       </div>
    );
 };
