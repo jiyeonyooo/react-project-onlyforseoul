@@ -3,6 +3,7 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css'
 import {useState} from 'react';
 import dayjs from 'dayjs';
+import {IoChevronForwardCircle, IoChevronBackCircle} from 'react-icons/io5';
 
 const SeoulCalendar = () => {
 
@@ -25,11 +26,16 @@ const SeoulCalendar = () => {
    return (
       <div className="calendar__wrapper">
          <Calendar 
+            calendarType = "hebrew"
             onChange={handleClickDate} value={date}
             formatDay={() => ""}
             formatShortWeekday={(locale, date) => 
                date.toLocaleDateString('en-US', {weekday: 'short'}).toUpperCase()}
             tileContent={customCell}
+            prev2Label={null}
+            next2Label={null}
+            prevLabel={<IoChevronBackCircle className="calendar-icon back"/>}
+            nextLabel={<IoChevronForwardCircle className="calendar-icon forward"/>}
          ></Calendar>
       </div>
    );

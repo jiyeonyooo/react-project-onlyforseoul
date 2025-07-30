@@ -1,8 +1,56 @@
 .calendar__wrapper .react-calendar {
-   width: 700px;
+   width: 100%;
    max-width: none;
-   background: #1b1b1b;
+   background: #101010;
    border: none;
+}
+
+.react-calendar__navigation__label {
+   color: #fafafa;
+   font-weight: 700;
+   font-size: 1.2rem;
+   padding: 0 !important;
+}
+.react-calendar__navigation button {
+  background: none !important;       
+  box-shadow: none !important;      
+  outline: none !important;         
+}
+
+.react-calendar__navigation button:hover,
+.react-calendar__navigation button:active,
+.react-calendar__navigation button:focus {
+  background: none !important;        /* 호버/클릭시 배경색 제거 */
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.calendar-icon {
+  font-size: 1.3rem;
+  color: rgba(250, 250, 250, 0.5);
+  transition: transform 0.2s;
+}
+
+.react-calendar__navigation__arrow:hover {
+   background-color: transparent !important;
+}
+
+.react-calendar__navigation {
+  justify-content: flex-start; 
+  gap: 5px;                    
+  margin-bottom: 5px !important;
+}
+
+.react-calendar__navigation__label {
+  flex: none !important;       
+  width: auto !important;      
+  padding: 0 8px;              
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.react-calendar__navigation__label:hover {
+   background-color: transparent !important;
 }
 
 .react-calendar__viewContainer {
@@ -55,8 +103,9 @@
    width: 100%;
    height: 100%;
    position: relative;
-   background-color: rgba(0, 0, 0, 0.2);
+   background-color: #1d1d1d80;
    border-radius: 10px;
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .react-calendar__month-view__days__day--neighboringMonth .custom-tile {
@@ -74,7 +123,7 @@
 }
 
 .react-calendar__month-view__days__day--neighboringMonth .date-number {
-   color: #1b1b1b;
+   color: #101010;
 }
 
 .react-calendar__month-view__weekdays {
