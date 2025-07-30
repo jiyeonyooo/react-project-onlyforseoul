@@ -1,25 +1,3 @@
-:root{
- --mainWhite: #f2f3f7;
- --buttonWhite:-2px -2px 5px rgba(255,255,255,1),
-                 3px 3px 5px rgba(0,0,0,.07); 
- --buttonWhiteActive:inset -2px -2px 5px rgba(255,255,255,1),
-                     inset 3px 3px 5px rgba(0,0,0,.07);
- --iconWhiteVer:#6a9bd8;
- --mainDark:#222;
-  --buttonDark:inset -2px -2px 5px rgba(0,0,0,0.5),
-                     inset 3px 3px 5px rgba(255,255,255,.07);
- --buttonDarkActive:-2px -2px 5px rgba(0,0,0,0.5),
-                 3px 3px 5px rgba(255,255,255,.07); 
-
- --iconDarkVer:#3e3e3e;
- --iconDarkVerActive:0 0 10px rgba(33,156,243,1),
-                      0 0 10px rgba(33,156,243,1);
- --iconDarkLine:0 0 10px rgba(33,156,243,.5),
-   0 0 20px rgba(33,156,243,.5),
-   0 0 30px rgba(33,156,243,.5),
-   inset 0 0 10px rgba(33,156,243,.5),
-}
-
 .schedule-wrapper {
   width: 100%;
   height: 150px;
@@ -53,7 +31,7 @@
 
 .location-icon {
   font-size: 0.9rem;
-  color: #FF3B3B;
+  color: var(--red-neon);
   margin-right: 5px;
 }
 
@@ -74,7 +52,7 @@
   width: 100%;
   height: 100%;
 
-  background-color: #FF3B3B;
+  background-color: var(--red-neon);
   border-radius: 10px;
 }
 
@@ -83,7 +61,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); /*가운데정렬*/
-  color: #fafafa;
+  color: var(--color-light);
   font-weight: 700;
   font-size: 14px;
   z-index: 1;
@@ -97,18 +75,17 @@ h1 {
 }
 
 .text {
-  color: #101010; /* 텍스트 색 = 배경색 */
-  text-shadow: var(--buttonDark);        /* 아래쪽 그림자 */
+  color: var(--color-dark)
+  text-shadow: var(--neumorphism);  
   letter-spacing: 2px;
   font-family: 'Segoe UI', sans-serif;
   transition: all 0.2s ease-in-out;
   display: inline-block;
 }
 
-/* 눌린 텍스트 */
 .text.pressed {
   color: #101010;
-  text-shadow: var(--buttonDarkActive);
+  text-shadow: var(--neumorphism-inverse);   
   transform: translateY(2px) scale(0.98);
 }
 
@@ -117,11 +94,11 @@ h1 {
   width: 300px;
   height: 150px;
   border-radius: 10px;
-  background:#101010;
-  box-shadow:var(--buttonDark);
+  background:var(--color-dark);
+  box-shadow:var(--neumorphism);
 }
 
 .test:active {
-  box-shadow: var(--buttonDarkActive); /* 눌렸을 때 그림자 */
-  transform: scale(0.95); /* 눌린 듯한 작아지는 효과 */
+  box-shadow: var(--neumorphism-inverse);
+  transform: scale(0.95); 
 }
