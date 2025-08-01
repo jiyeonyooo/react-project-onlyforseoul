@@ -4,6 +4,8 @@ import 'react-calendar/dist/Calendar.css'
 import {useState} from 'react';
 import dayjs from 'dayjs';
 import {IoChevronForwardCircle, IoChevronBackCircle} from 'react-icons/io5';
+import schedules from '../data/Schedules.jsx';
+import OnSchedule from './OnSchedule.jsx';
 
 const SeoulCalendar = () => {
 
@@ -16,9 +18,17 @@ const SeoulCalendar = () => {
 
    const customCell = ({date, view}) => {
       if (view !== 'month') return null;
+
+      const formattedDate = dayjs(date).format("YYYY-MM-DD");
+      const daySchedules = schedules[formattedDate] || [];
+
       return (
          <div className="custom-tile">
             <div className="date-number">{date.getDate()}</div>
+            <div className="schedule-list">
+               {daySchedules.map((s, idx) => (
+                  <OnSchedule key={idx} schedule={s} />))}
+            </div>
          </div>
       );
    };
