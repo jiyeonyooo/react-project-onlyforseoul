@@ -64,6 +64,12 @@
    --red-600: #b5191a;
    --red-700: #7a0e0f;
    --red-800: #490909;
+
+   --event-red: #FF3B3B;
+   --event-blue: #3B82F6;
+   --event-purple: #8B5CF6;
+   --event-green: #10B981;
+   --event-orange: #F97316;
 }
 
 :root {
