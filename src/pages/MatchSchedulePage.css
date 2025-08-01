@@ -2,13 +2,23 @@
    width: 100%;
    display: flex;
    flex-direction: row;
-   padding: 0 20px;
+   justify-content: center;
+   gap: 50px;
+   padding: 10px 50px;
 }
 
 .calendar {
-   flex: 0 0 69%;
+   flex: 0 0 60%;
 }
 
 .schedules {
-   flex: 0 0 29%;
+   flex: 0 0 30%;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+.schedules-title {
+   font-weight: 700;
+   font-size: 1.8rem;
 }
