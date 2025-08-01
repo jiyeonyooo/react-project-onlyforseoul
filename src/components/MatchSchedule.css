@@ -1,0 +1,122 @@
+.match-wrapper {
+   width: 550px;
+   height: 200px;
+   display: flex;
+   flex-direction: column;
+   border-radius: 10px;
+   box-shadow: 0px 4px 3px var(--red-main),
+               0px -4px 3px var(--red-main),
+               4px 0px 3px var(--red-main),
+               -4px 0px 3px var(--red-main);
+
+}
+
+.dday-wrapper {
+   background-color: var(--red-main);
+   width: 10%;
+   height: auto;
+   padding: 5px 0px;
+   border-bottom-right-radius: 10px;
+   border-top-left-radius: 10px;
+   display: flex;
+   justify-content: center;
+}
+
+.dday-wrapper > span {
+   font-weight: 600;
+   font-size: 1rem;
+}
+
+.match--info {
+   display: flex;
+   flex: 1;
+   flex-direction: row;
+   padding: 5px 25px 10px 25px;
+}
+
+.match--info__text {
+   flex: 0 0 40%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   gap: 10px;
+}
+
+.match-type {
+   font-weight: 600;
+   font-size: 1.4rem;
+}
+
+.match-date {
+   font-weight: 600;
+   font-size: 1.2rem;
+}
+
+.match-time {
+   font-weight: 800;
+   font-size: 1.8rem;
+}
+
+.loca-icon {
+   font-size: 0.8rem;
+}
+
+.match-loca {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   gap: 5px;
+}
+
+.match-loca > span {
+   font-weight: 400;
+   font-size: 0.9rem;
+}
+.match--info__vs {
+   flex: 0 0 60%;
+   display: flex;
+   flex-direction: row:
+}
+
+.club-logo {
+   flex: 0 0 40%;
+   display:flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
+   gap: 10px;
+
+}
+
+.club-name {
+   font-weight: 600;
+   font-size: 1.1rem;
+}
+
+.logo-img {
+   height: 110px;
+   width: auto;
+}
+
+.club-vs {
+   flex: 0 0 20%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 5px;
+}
+
+.club-vs > span {
+   font-weight: 800;
+   font-size: 2.5rem;
+   color: var(--gray-400);
+}
+
+.match-round {
+   background-color: var(--red-neon);
+   padding: 5px 8px;
+   border-radius: 15px;
+   font-weight: 600;
+   font-size: 1rem;
+}
